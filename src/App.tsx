@@ -5,6 +5,7 @@ import "./App.css";
 import Profile from "./Profile.tsx";
 //import SubmitMsgSend from './SubmitMsgSend';
 //import SubmitMsgLiquify from './SubmitMsgLiquify';
+import Tabs from './Tabs.tsx';
 
 import { WagmiConfig, createConfig } from "wagmi";
 import { createPublicClient, http } from "viem";
@@ -46,6 +47,7 @@ function App() {
   return (
     <WagmiConfig config={config}>
       <Profile />
+      <Tabs />
     </WagmiConfig>
   );
 }
