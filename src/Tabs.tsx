@@ -6,6 +6,7 @@ import AverageBlockTime from "./AverageBlockTime";
 import TotalTransactions from "./TotalTransactions";
 import WalletAddresses from "./WalletAddresses";
 import GasTracker from "./GasTracker";
+// import SubmitMsgSend from "./SubmitMsgSend";
 
 type TabProps = {
   selected: boolean;
@@ -40,6 +41,7 @@ const ButtonGroup = styled.div`
 */
 
 const types = ['Total blocks', 'Average block time', 'Total transactions', 'Wallet addresses', 'Gas tracker'];
+// const types = ['Total blocks', 'SubmitMsgSend', 'Total transactions', 'Wallet addresses', 'Gas tracker'];
 
 function Tabs() {
   const [active, setActive] = useState(types[0])
@@ -55,6 +57,7 @@ function Tabs() {
       </div>
       {active === types[0] ? (<TotalBlocks />): (null)}
       {active === types[1] ? (<AverageBlockTime />): (null)}
+      {/* {active === types[1] ? (<SubmitMsgSend />): (null)} */}
       {active === types[2] ? (<TotalTransactions />): (null)}
       {active === types[3] ? (<WalletAddresses />): (null)}
       {active === types[4] ? (<GasTracker />): (null)}

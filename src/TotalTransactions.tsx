@@ -9,10 +9,8 @@ function TotalTransactions() {
     async function startFetching() {
       setBlockTransactions([]);
       const {transactions} = await web3GetBlock();
-      // console.log(response)
       if (!ignore) {
         setBlockTransactions(transactions);
-        console.log(transactions)
       }
     }
 

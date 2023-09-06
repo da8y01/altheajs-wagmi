@@ -8,7 +8,6 @@ function TotalBlocks() {
     async function startFetching() {
       setQuantity(0);
       const response = await web3GetBlock();
-      // console.log(response)
       if (!ignore) {
         setQuantity(response.number);
       }
