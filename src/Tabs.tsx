@@ -7,6 +7,7 @@ import TotalTransactions from "./TotalTransactions";
 import WalletAddresses from "./WalletAddresses";
 import GasTracker from "./GasTracker";
 // import SubmitMsgSend from "./SubmitMsgSend";
+import QueryAccount from "./QueryAccount";
 
 type TabProps = {
   selected: boolean;
@@ -40,8 +41,7 @@ const ButtonGroup = styled.div`
 `;
 */
 
-const types = ['Total blocks', 'Average block time', 'Total transactions', 'Wallet addresses', 'Gas tracker'];
-// const types = ['Total blocks', 'SubmitMsgSend', 'Total transactions', 'Wallet addresses', 'Gas tracker'];
+const types = ['Total blocks', 'Average block time', 'Total transactions', 'Wallet addresses', 'Gas tracker', 'Query account'];
 
 function Tabs() {
   const [active, setActive] = useState(types[0])
@@ -61,6 +61,7 @@ function Tabs() {
       {active === types[2] ? (<TotalTransactions />): (null)}
       {active === types[3] ? (<WalletAddresses />): (null)}
       {active === types[4] ? (<GasTracker />): (null)}
+      {active === types[5] ? (<QueryAccount />): (null)}
     </>
   )
 }

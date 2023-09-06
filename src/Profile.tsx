@@ -1,7 +1,7 @@
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
 import styled from "styled-components";
-import { SendTransaction } from "./SendTxn";
+import { SendTransaction } from "./SendTxn.tsx";
 import {
   computePublicKey,
   recoverPublicKey,
@@ -45,6 +45,7 @@ function Profile() {
       <FlexContainer>
         Connected to {address}
         <button onClick={() => disconnect()}>Disconnect</button>
+        <SendTransaction address="0x1234" />
       </FlexContainer>
     );
   return <button onClick={() => connect()}>Connect Wallet</button>;
