@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from 'styled-components';
 
 import "./App.css";
+import logo from './logo.svg';
 import Profile from "./Profile.tsx";
 //import SubmitMsgSend from './SubmitMsgSend';
 //import SubmitMsgLiquify from './SubmitMsgLiquify';
@@ -46,6 +47,7 @@ const types = ['Bank Send', 'Microtx Liquify'];
 function App() {
   return (
     <WagmiConfig config={config}>
+      <div><img src={logo} className="App-logo" alt="logo" /></div>
       <Profile />
       <Tabs />
     </WagmiConfig>
