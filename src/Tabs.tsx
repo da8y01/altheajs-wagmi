@@ -41,7 +41,7 @@ const ButtonGroup = styled.div`
 `;
 */
 
-const types = ['Total blocks', 'Average block time', 'Total transactions', 'Wallet addresses', 'Gas tracker', 'Query account'];
+const types = ['Total blocks', 'Total transactions', 'Wallet addresses', 'Query account'];
 
 function Tabs() {
   const [active, setActive] = useState(types[0])
@@ -56,12 +56,12 @@ function Tabs() {
         ))}
       </div>
       {active === types[0] ? (<TotalBlocks />): (null)}
-      {active === types[1] ? (<AverageBlockTime />): (null)}
+      {/* {active === types[1] ? (<AverageBlockTime />): (null)} */}
       {/* {active === types[1] ? (<SubmitMsgSend />): (null)} */}
-      {active === types[2] ? (<TotalTransactions />): (null)}
-      {active === types[3] ? (<WalletAddresses />): (null)}
-      {active === types[4] ? (<GasTracker />): (null)}
-      {active === types[5] ? (<QueryAccount />): (null)}
+      {active === types[1] ? (<TotalTransactions />): (null)}
+      {active === types[2] ? (<WalletAddresses />): (null)}
+      {/* {active === types[4] ? (<GasTracker />): (null)} */}
+      {active === types[3] ? (<QueryAccount />): (null)}
     </>
   )
 }

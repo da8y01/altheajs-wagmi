@@ -1,6 +1,5 @@
 import {useState, useEffect} from "react"
 import { generateEndpointAccount } from '@althea-net/provider'
-import { ResourceNotFoundRpcError } from "viem"
 
 // The response format is available at @althea-net/provider/rest/account/AccountResponse.
 // Note that the `pub_key` will be `null` if the address has not sent any transactions.
@@ -22,18 +21,16 @@ import { ResourceNotFoundRpcError } from "viem"
 
 function QueryAccount() {
   const [accountData, setAccountData] = useState({})
-  // const [errorMessage, setErrorMessage] = useState({})
   const [errorMessage, setErrorMessage] = useState({})
 
   // const address = 'althea1...'
-  const address = "althea1ka5ep6vh8493smdn932afclda9hldcpm2wqhqw"
+  const address = "althea1tp93jkvn7p4zx7apryj8nyppeejzj4ypeuv0w0"
 
   // Find node urls for either mainnet or testnet here:
   // https://docs.evmos.org/develop/api/networks.
   // const nodeUrl = 'https://grpc.bd.evmos.org:9090'
-  const nodeUrl = 'https://althea.zone'
   // const nodeUrl = 'https://althea.zone:8545'
-  // const nodeUrl = 'https://althea.zone:9090'
+  const nodeUrl = 'https://chainripper-2.althea.net:23296'
   const queryEndpoint = `${nodeUrl}${generateEndpointAccount(address)}`
 
   const restOptions = {
